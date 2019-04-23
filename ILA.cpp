@@ -94,6 +94,8 @@ int main() {
 		if(data[i].result=="yes" || data[i].result=="Yes")	trueData.push_back(i);
 		else	falseData.push_back(i);
 	}
+	cout<<endl;
+	int j=1;
 	while (!trueData.empty()) {
 		for (int i=1; i<=features.size(); i++) {
 			maxTrue=0;
@@ -103,6 +105,7 @@ int main() {
 			checkFeature(0, select, i);
 			// cout<<i<<" "<<maxTrue<<endl;
 			if(maxTrue==0)	continue;
+			cout<<"Rule No. "<<j++<<endl;
 			vector<int> rtrueData;
 			for (int i=0; i<trueData.size(); i++) {
 				bool ch=0;
@@ -116,22 +119,26 @@ int main() {
 					rtrueData.push_back(trueData[i]);
 				}
 			}
+			for (auto it:currentRule) {
+				cout<<it.first<<": "<<it.second<<endl;
+			}
+			cout<<"Result: Yes"<<endl;
+			cout<<endl;
 			rules[currentRule]="yes";
 			trueData=rtrueData;
 			break;
 		}
 	}
 
-	cout<<endl;
-	int j=1;
-	for (auto i:rules) {
-		cout<<"Rule No. "<<j++<<endl;
-		for (auto j:i.first) {
-			cout<<j.first<<": "<<j.second<<endl;
-		}
-		cout<<"Result: "<<i.second<<endl;
-		cout<<endl;
-	}
+	
+	// for (auto i:rules) {
+	// 	cout<<"Rule No. "<<j++<<endl;
+	// 	for (auto j:i.first) {
+	// 		cout<<j.first<<": "<<j.second<<endl;
+	// 	}
+	// 	cout<<"Result: "<<i.second<<endl;
+	// 	cout<<endl;
+	// }
 	cout<<"Rule No. "<<j++<<endl;
 	cout<<"else result is no\n";
 

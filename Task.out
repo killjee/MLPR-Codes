@@ -1,23 +1,23 @@
 Enter number of features: 
 
 Rule No. 1
-Humidity: Normal
-Temprature: Mild
-Result: yes
+Outlook Overcast
+Result: Yes
 
 Rule No. 2
-Humidity: Normal
-Wind: Weak
-Result: yes
+Humidity Normal
+Wind Weak
+Result: Yes
 
 Rule No. 3
-Outlook: Overcast
-Result: yes
+Humidity Normal
+Temprature Mild
+Result: Yes
 
 Rule No. 4
-Outlook: Rain
-Wind: Weak
-Result: yes
+Outlook Rain
+Wind Weak
+Result: Yes
 
 Rule No. 5
 else result is no

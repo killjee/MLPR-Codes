@@ -69,7 +69,7 @@ int main() {
 	}
 
 	ifstream in;
-	in.open("ILAData2.cvv");
+	in.open("ILAData.cvv");
 
 	string val;
 	while (in>>val) {
@@ -86,10 +86,6 @@ int main() {
 	}
 
 	for (int i=0; i<data.size(); i++) {
-		// for (auto j:data[i].value) {
-		// 	cout<<j.first<<" "<<j.second<<endl;
-		// }
-		// cout<<data[i].result<<endl<<endl;
 
 		if(data[i].result=="yes" || data[i].result=="Yes")	trueData.push_back(i);
 		else	falseData.push_back(i);
@@ -103,7 +99,6 @@ int main() {
 			selects.clear();
 			vector<int>select;
 			checkFeature(0, select, i);
-			// cout<<i<<" "<<maxTrue<<endl;
 			if(maxTrue==0)	continue;
 			cout<<"Rule No. "<<j++<<endl;
 			vector<int> rtrueData;
@@ -130,15 +125,7 @@ int main() {
 		}
 	}
 
-	
-	// for (auto i:rules) {
-	// 	cout<<"Rule No. "<<j++<<endl;
-	// 	for (auto j:i.first) {
-	// 		cout<<j.first<<": "<<j.second<<endl;
-	// 	}
-	// 	cout<<"Result: "<<i.second<<endl;
-	// 	cout<<endl;
-	// }
+
 	cout<<"Rule No. "<<j++<<endl;
 	cout<<"else result is no\n";
 

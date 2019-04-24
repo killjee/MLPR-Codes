@@ -1,23 +1,31 @@
 Enter number of features: 
+Number of Nodes: 8
 
-Rule No. 1
-Outlook Overcast
-Result: Yes
+1 2
+Rule: 
+Outlook should be Sunny
 
-Rule No. 2
-Humidity Normal
-Wind Weak
-Result: Yes
+1 3
+Rule: 
+Outlook should be Overcast
 
-Rule No. 3
-Humidity Normal
-Temprature Mild
-Result: Yes
+1 4
+Rule: 
+Outlook should be Rain
 
-Rule No. 4
-Outlook Rain
-Wind Weak
-Result: Yes
+2 5
+Rule: 
+Humidity should be High
 
-Rule No. 5
-else result is no
+2 6
+Rule: 
+Humidity should be Normal
+
+4 7
+Rule: 
+Wind should be Weak
+
+4 8
+Rule: 
+Wind should be Strong
+
